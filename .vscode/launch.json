@@ -13,10 +13,13 @@
             "args": [
                 "run",
                 "--no-debugger",
-                "--no-reload"     // ✅ 修正后的参数！
+                "--no-reload"
             ],
             "jinja": true,
-            "justMyCode": true
+            "justMyCode": true,
+            
+            // ⭐ 新增这一行: 告诉 VS Code 在调试器启动后运行 'open-browser' 任务
+            "postDebugTask": "open-browser" 
         }
     ]
 }

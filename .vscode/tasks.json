@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "open-browser",
+            "type": "shell",
+            // Windows 使用 start 命令打开 URL
+            "command": "start http://127.0.0.1:5000",
+            "problemMatcher": [],
+            "group": "none",
+            "runOptions": {
+                "runOn": "default"
+            }
+        }
+    ]
+}
