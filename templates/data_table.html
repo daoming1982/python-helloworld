@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可可批次数据</title>
+    <style>
+        table { width: 80%; margin: 20px auto; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>云南可可批次详情</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>批次 ID</th>
+                <th>产地</th>
+                <th>发酵时间</th>
+                <th>干重 (kg)</th>
+                <th>状态</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for batch in batches %}
+            <tr>
+                <td>{{ batch.id }}</td>
+                <td>{{ batch.origin }}</td>
+                <td>{{ batch.fermentation_days }} 天</td>
+                <td>{{ batch.weight }}</td>
+                <td>{{ batch.status }}</td>
+            </tr>
+            {% endfor %}
+            
+            <tr>
+                <td>C001</td>
+                <td>云南普洱</td>
+                <td>6 天</td>
+                <td>150.5</td>
+                <td>已烘烤</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
